@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/maximus_test/static/css/main.d941895e.css",
+    "main.js": "/maximus_test/static/js/main.5d2c7182.js",
+    "index.html": "/maximus_test/index.html",
+    "main.d941895e.css.map": "/maximus_test/static/css/main.d941895e.css.map",
+    "main.5d2c7182.js.map": "/maximus_test/static/js/main.5d2c7182.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d941895e.css",
+    "static/js/main.5d2c7182.js"
+  ]
+}
