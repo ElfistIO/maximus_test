@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { InputCheckbox } from "./Components/Input/InputCheckbox";
+import { Modal } from "./Components/Modal/Modal";
+import { Tabs } from "./Components/Tabs/Tabs";
+
+import style from "./App.module.scss";
 
 function App() {
+  const [isModal, setIsModal] = useState(false);
+  const onClose = () => setIsModal(false);
+
+  const options = [
+    {
+      option: "Sarabanda",
+    },
+    {
+      option: "Minibanda",
+    },
+    {
+      option: "iDO",
+    },
+    {
+      option: "Superga",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className={style.wrapper}>
+      <div className={style.input__wrapper}>
+        <div className={style.input__checkboxRadio}>
+          {options.map((option) => (
+            <InputCheckbox option={option.option} />
+          ))}
+        </div>
+      </div>
+      <hr />
+      <div className={style.feedback__wrapper}>
+        <button
+          className={style.feedback__button}
+          onClick={() => setIsModal(true)}
         >
-          Learn React
-        </a>
-      </header>
+          Заказать консультацию
+        </button>
+      </div>
+      <Modal visible={isModal} onClose={onClose} />
+      <hr />
+      <Tabs />
     </div>
   );
 }

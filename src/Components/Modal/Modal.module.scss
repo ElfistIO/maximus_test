@@ -1,0 +1,55 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  animation-name: appear;
+  animation-duration: 300ms;
+
+  &__content {
+    width: 500px;
+    height: 300px;
+    border-radius: 7px;
+    background: white;
+    position: relative;
+    max-height: calc(100vh - 40px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+  }
+  &__body {
+    padding: 50px 50px;
+  }
+  &__footer {
+    padding: 50px 50px;
+  }
+  &__button {
+    font-family: 'Roboto';
+    font-size: 16px;
+    border-radius: 25px;
+    border: 2px solid rgb(241, 241, 241);
+    background-color:rgb(64, 67, 77);
+    color:rgb(241, 241, 241);
+    width: 250px;
+    height: 50px;
+  }
+  &__button:hover {
+    background-color:rgb(119, 120, 124);
+    transition: all 0.7s ease-in-out;
+  }
+}

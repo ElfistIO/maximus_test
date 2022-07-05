@@ -1,0 +1,38 @@
+.label__checkbox {
+  position: relative;
+  display: flex;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    padding-left: 10px;
+  }
+
+  & Input {
+    opacity: 0;
+    display: none;
+    &:checked + .label__checkboxSvg {
+      path {
+        opacity: 1;
+      }
+    }
+  }
+
+  & Svg {
+    width: 25px;
+    height: 20px;
+    & path {
+      transition: 0.2s;
+      opacity: 0;
+    }
+    &.checked {
+      path {
+        opacity: 1;
+      }
+    }
+  }
+}

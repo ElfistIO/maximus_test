@@ -1,0 +1,50 @@
+.tabs {
+  &__wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display : flex;
+    flex-direction: column;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__buttons button {
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    color: #535151;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 25px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease-out;
+  }
+  &__buttons button:first-child {
+    border-radius: 15px 0 0 15px;
+  }
+  &__buttons button:last-child {
+    border-radius: 0 15px 15px 0;
+  }
+  &__buttons button:disabled {
+    background: rgb(95, 146, 255);
+    border: 1px solid lightgray;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+  }
+  &__content {
+    padding: 50px 80px;
+    background-color: white;
+    font-weight: 300;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: justify;
+}
+}
